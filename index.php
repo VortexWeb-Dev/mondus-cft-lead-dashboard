@@ -21,20 +21,21 @@
         <table id="leads-table" class="w-full text-sm border-collapse rounded-md overflow-hidden">
             <!-- Main Headers -->
             <thead>
+                <!-- Main Headers -->
                 <tr class="bg-black text-white">
-                    <th class="p-2 text-left" width="50px"></th>
-                    <th class="p-2 text-left">Agent</th>
-                    <th class="p-2 text-left">Branch</th>
-                    <th class="p-2 text-center" colspan="6">PAID LEADS</th>
-                    <th class="p-2 text-center" colspan="6">OTHER LEADS</th>
-                    <th class="p-2 text-center" colspan="6">TOTAL LEADS<br />(ALL TIME)</th>
-                    <th class="p-2 text-center" colspan="3">ZIWO</th>
+                    <th class="p-2 text-left group-agent" width="50px"></th>
+                    <th class="p-2 text-left group-agent">Agent</th>
+                    <th class="p-2 text-left group-branch">Branch</th>
+                    <th class="p-2 text-center group-paid" colspan="6">PAID LEADS</th>
+                    <th class="p-2 text-center group-other" colspan="6">OTHER LEADS</th>
+                    <th class="p-2 text-center group-total" colspan="6">TOTAL LEADS<br />(ALL TIME)</th>
+                    <th class="p-2 text-center group-ziwo" colspan="3">ZIWO</th>
                 </tr>
                 <!-- Filter Row -->
                 <tr class="bg-gray-800 text-white">
-                    <td colspan="3"></td>
+                    <td colspan="3" class="group-agent group-branch"></td>
                     <!-- Paid Leads Filter -->
-                    <td colspan="6" class="p-1 text-center">
+                    <td colspan="6" class="p-1 text-center group-paid">
                         <div class="bg-gray-600 rounded flex items-center justify-between px-2 py-1 mx-6">
                             <select id="paid-leads-filter" class="bg-gray-600 text-white outline-none w-full">
                                 <option value="all">ALL</option>
@@ -48,7 +49,7 @@
                         </div>
                     </td>
                     <!-- Other Leads Filter -->
-                    <td colspan="6" class="p-1 text-center">
+                    <td colspan="6" class="p-1 text-center group-other">
                         <div class="bg-gray-600 rounded flex items-center justify-between px-2 py-1 mx-6">
                             <select id="other-leads-filter" class="bg-gray-600 text-white outline-none w-full">
                                 <option value="all">ALL</option>
@@ -61,38 +62,38 @@
                             </select>
                         </div>
                     </td>
-                    <td colspan="9"></td>
+                    <td colspan="9" class="group-total group-ziwo"></td>
                 </tr>
                 <!-- Column Headers -->
                 <tr class="bg-gray-700 text-white text-xs">
-                    <th class="border-r border-gray-600"></th>
-                    <th class="border-r border-gray-600">Agent</th>
-                    <th class="border-r border-gray-600">Branch</th>
+                    <th class="border-r border-gray-600 group-agent"></th>
+                    <th class="border-r border-gray-600 group-agent">Agent</th>
+                    <th class="border-r border-gray-600 group-branch">Branch</th>
                     <!-- Paid Leads Headers -->
-                    <th class="border-r border-gray-600 p-1">Assigned</th>
-                    <th class="border-r border-gray-600 p-1">Contacted</th>
-                    <th class="border-r border-gray-600 p-1">Qualified</th>
-                    <th class="border-r border-gray-600 p-1">Demo</th>
-                    <th class="border-r border-gray-600 p-1">ID</th>
-                    <th class="border-r border-gray-600 p-1">Remaining</th>
+                    <th class="border-r border-gray-600 p-1 group-paid">Assigned</th>
+                    <th class="border-r border-gray-600 p-1 group-paid">Contacted</th>
+                    <th class="border-r border-gray-600 p-1 group-paid">Qualified</th>
+                    <th class="border-r border-gray-600 p-1 group-paid">Demo</th>
+                    <th class="border-r border-gray-600 p-1 group-paid">ID</th>
+                    <th class="border-r border-gray-600 p-1 group-paid">Remaining</th>
                     <!-- Other Leads Headers -->
-                    <th class="border-r border-gray-600 p-1">Assigned</th>
-                    <th class="border-r border-gray-600 p-1">Contacted</th>
-                    <th class="border-r border-gray-600 p-1">Qualified</th>
-                    <th class="border-r border-gray-600 p-1">Demo</th>
-                    <th class="border-r border-gray-600 p-1">ID</th>
-                    <th class="border-r border-gray-600 p-1">Remaining</th>
+                    <th class="border-r border-gray-600 p-1 group-other">Assigned</th>
+                    <th class="border-r border-gray-600 p-1 group-other">Contacted</th>
+                    <th class="border-r border-gray-600 p-1 group-other">Qualified</th>
+                    <th class="border-r border-gray-600 p-1 group-other">Demo</th>
+                    <th class="border-r border-gray-600 p-1 group-other">ID</th>
+                    <th class="border-r border-gray-600 p-1 group-other">Remaining</th>
                     <!-- Total Leads Headers -->
-                    <th class="border-r border-gray-600 p-1">Assigned</th>
-                    <th class="border-r border-gray-600 p-1">Contacted</th>
-                    <th class="border-r border-gray-600 p-1">Qualified</th>
-                    <th class="border-r border-gray-600 p-1">Demo</th>
-                    <th class="border-r border-gray-600 p-1">ID</th>
-                    <th class="border-r border-gray-600 p-1">Remaining</th>
+                    <th class="border-r border-gray-600 p-1 group-total">Assigned</th>
+                    <th class="border-r border-gray-600 p-1 group-total">Contacted</th>
+                    <th class="border-r border-gray-600 p-1 group-total">Qualified</th>
+                    <th class="border-r border-gray-600 p-1 group-total">Demo</th>
+                    <th class="border-r border-gray-600 p-1 group-total">ID</th>
+                    <th class="border-r border-gray-600 p-1 group-total">Remaining</th>
                     <!-- Ziwo Headers -->
-                    <th class="border-r border-gray-600 p-1">Outbound</th>
-                    <th class="border-r border-gray-600 p-1">Answered</th>
-                    <th class="p-1">Paid</th>
+                    <th class="border-r border-gray-600 p-1 group-ziwo">Outbound</th>
+                    <th class="border-r border-gray-600 p-1 group-ziwo">Answered</th>
+                    <th class="p-1 group-ziwo">Paid</th>
                 </tr>
             </thead>
             <tbody>
