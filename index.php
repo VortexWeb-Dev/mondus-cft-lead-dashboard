@@ -7,11 +7,11 @@
         <div class="flex items-center space-x-2">
             <div class="flex flex-col items-center">
                 <span class="text-sm text-center font-medium bg-gray-200 rounded-t-md w-36 px-2 py-1">Start</span>
-                <input type="date" id="start-date" value="2023-01-24" class="bg-gray-400 text-center border border-gray-200 rounded-b-md w-36 px-2 py-1 text-sm">
+                <input type="date" id="start-date" value="<?= date('Y-m-d'); ?>" class="bg-gray-400 text-center border border-gray-200 rounded-b-md w-36 px-2 py-1 text-sm">
             </div>
             <div class="flex flex-col items-center">
                 <span class="text-sm text-center font-medium bg-gray-200 rounded-t-md w-36 px-2 py-1">End</span>
-                <input type="date" id="end-date" value="2023-01-24" class="bg-gray-400 text-center border border-gray-200 rounded-b-md w-36 px-2 py-1 text-sm">
+                <input type="date" id="end-date" value="<?= date('Y-m-d'); ?>" class="bg-gray-400 text-center border border-gray-200 rounded-b-md w-36 px-2 py-1 text-sm">
             </div>
         </div>
     </div>
@@ -122,181 +122,35 @@
                         </div>
                     </td>
                     <!-- Paid Leads -->
-                    <td class="border-r border-gray-400 p-2 text-center paid-assigned">50</td>
-                    <td class="border-r border-gray-400 p-2 text-center paid-contacted">50</td>
-                    <td class="border-r border-gray-400 p-2 text-center paid-qualified">50</td>
-                    <td class="border-r border-gray-400 p-2 text-center paid-demo">50</td>
-                    <td class="border-r border-gray-400 p-2 text-center paid-id bg-green-200">50</td>
-                    <td class="border-r border-gray-400 p-2 text-center paid-remaining">50</td>
+                    <td class="border-r border-gray-400 p-2 text-center paid-assigned">0</td>
+                    <td class="border-r border-gray-400 p-2 text-center paid-contacted">0</td>
+                    <td class="border-r border-gray-400 p-2 text-center paid-qualified">0</td>
+                    <td class="border-r border-gray-400 p-2 text-center paid-demo">0</td>
+                    <td class="border-r border-gray-400 p-2 text-center paid-id bg-green-200">0</td>
+                    <td class="border-r border-gray-400 p-2 text-center paid-remaining">0</td>
                     <!-- Other Leads -->
-                    <td class="border-r border-gray-400 p-2 text-center other-assigned">50</td>
-                    <td class="border-r border-gray-400 p-2 text-center other-contacted">50</td>
-                    <td class="border-r border-gray-400 p-2 text-center other-qualified">50</td>
-                    <td class="border-r border-gray-400 p-2 text-center other-demo">50</td>
-                    <td class="border-r border-gray-400 p-2 text-center other-id bg-green-200">50</td>
-                    <td class="border-r border-gray-400 p-2 text-center other-remaining">50</td>
+                    <td class="border-r border-gray-400 p-2 text-center other-assigned">0</td>
+                    <td class="border-r border-gray-400 p-2 text-center other-contacted">0</td>
+                    <td class="border-r border-gray-400 p-2 text-center other-qualified">0</td>
+                    <td class="border-r border-gray-400 p-2 text-center other-demo">0</td>
+                    <td class="border-r border-gray-400 p-2 text-center other-id bg-green-200">0</td>
+                    <td class="border-r border-gray-400 p-2 text-center other-remaining">0</td>
                     <!-- Total Leads -->
-                    <td class="border-r border-gray-400 p-2 text-center total-assigned">50</td>
-                    <td class="border-r border-gray-400 p-2 text-center total-contacted">50</td>
-                    <td class="border-r border-gray-400 p-2 text-center total-qualified">50</td>
-                    <td class="border-r border-gray-400 p-2 text-center total-demo">50</td>
-                    <td class="border-r border-gray-400 p-2 text-center total-id bg-green-200">50</td>
-                    <td class="border-r border-gray-400 p-2 text-center total-remaining">50</td>
+                    <td class="border-r border-gray-400 p-2 text-center total-assigned">0</td>
+                    <td class="border-r border-gray-400 p-2 text-center total-contacted">0</td>
+                    <td class="border-r border-gray-400 p-2 text-center total-qualified">0</td>
+                    <td class="border-r border-gray-400 p-2 text-center total-demo">0</td>
+                    <td class="border-r border-gray-400 p-2 text-center total-id bg-green-200">0</td>
+                    <td class="border-r border-gray-400 p-2 text-center total-remaining">0</td>
                     <!-- Ziwo -->
-                    <td class="border-r border-gray-400 p-2 text-center ziwo-outbound">50</td>
-                    <td class="border-r border-gray-400 p-2 text-center ziwo-answered">50</td>
-                    <td class="p-2 text-center ziwo-paid">50</td>
+                    <td class="border-r border-gray-400 p-2 text-center ziwo-outbound">0</td>
+                    <td class="border-r border-gray-400 p-2 text-center ziwo-answered">0</td>
+                    <td class="p-2 text-center ziwo-paid">0</td>
                 </tr>
                 <!-- Agent Rows -->
                 <tr class="bg-white agent-row" data-agent="asif" data-branch="rudra" data-date="2023-01-24">
-                    <td class="border-r border-gray-300 p-2 font-medium">01</td>
-                    <td class="border-r border-gray-300 p-2">ASIF</td>
-                    <td class="border-r border-gray-300 p-2">RUDRA</td>
-                    <!-- Paid Leads -->
-                    <td class="border-r border-gray-300 p-2 text-center paid-assigned">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center paid-contacted">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center paid-qualified">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center paid-demo">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center paid-id bg-green-200">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center paid-remaining">50</td>
-                    <!-- Other Leads -->
-                    <td class="border-r border-gray-300 p-2 text-center other-assigned">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center other-contacted">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center other-qualified">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center other-demo">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center other-id bg-green-200">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center other-remaining">50</td>
-                    <!-- Total Leads -->
-                    <td class="border-r border-gray-300 p-2 text-center total-assigned">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center total-contacted">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center total-qualified">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center total-demo">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center total-id bg-green-200">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center total-remaining">50</td>
-                    <!-- Ziwo -->
-                    <td class="border-r border-gray-300 p-2 text-center ziwo-outbound">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center ziwo-answered">50</td>
-                    <td class="p-2 text-center ziwo-paid">50</td>
-                </tr>
-                <tr class="bg-gray-100 agent-row" data-agent="parth" data-branch="rudra" data-date="2023-01-24">
-                    <td class="border-r border-gray-300 p-2 font-medium">01</td>
-                    <td class="border-r border-gray-300 p-2">PARTH</td>
-                    <td class="border-r border-gray-300 p-2">RUDRA</td>
-                    <!-- Paid Leads -->
-                    <td class="border-r border-gray-300 p-2 text-center paid-assigned">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center paid-contacted">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center paid-qualified">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center paid-demo">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center paid-id bg-green-200">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center paid-remaining">50</td>
-                    <!-- Other Leads -->
-                    <td class="border-r border-gray-300 p-2 text-center other-assigned">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center other-contacted">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center other-qualified">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center other-demo">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center other-id bg-green-200">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center other-remaining">50</td>
-                    <!-- Total Leads -->
-                    <td class="border-r border-gray-300 p-2 text-center total-assigned">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center total-contacted">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center total-qualified">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center total-demo">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center total-id bg-green-200">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center total-remaining">50</td>
-                    <!-- Ziwo -->
-                    <td class="border-r border-gray-300 p-2 text-center ziwo-outbound">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center ziwo-answered">50</td>
-                    <td class="p-2 text-center ziwo-paid">50</td>
-                </tr>
-                <tr class="bg-white agent-row" data-agent="rishi" data-branch="rudra" data-date="2023-01-24">
-                    <td class="border-r border-gray-300 p-2 font-medium">01</td>
-                    <td class="border-r border-gray-300 p-2">RISHI</td>
-                    <td class="border-r border-gray-300 p-2">RUDRA</td>
-                    <!-- Paid Leads -->
-                    <td class="border-r border-gray-300 p-2 text-center paid-assigned">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center paid-contacted">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center paid-qualified">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center paid-demo">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center paid-id bg-green-200">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center paid-remaining">50</td>
-                    <!-- Other Leads -->
-                    <td class="border-r border-gray-300 p-2 text-center other-assigned">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center other-contacted">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center other-qualified">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center other-demo">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center other-id bg-green-200">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center other-remaining">50</td>
-                    <!-- Total Leads -->
-                    <td class="border-r border-gray-300 p-2 text-center total-assigned">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center total-contacted">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center total-qualified">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center total-demo">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center total-id bg-green-200">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center total-remaining">50</td>
-                    <!-- Ziwo -->
-                    <td class="border-r border-gray-300 p-2 text-center ziwo-outbound">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center ziwo-answered">50</td>
-                    <td class="p-2 text-center ziwo-paid">50</td>
-                </tr>
-                <tr class="bg-gray-100 agent-row" data-agent="tanya" data-branch="dehradun" data-date="2023-01-24">
-                    <td class="border-r border-gray-300 p-2 font-medium">01</td>
-                    <td class="border-r border-gray-300 p-2">TANYA</td>
-                    <td class="border-r border-gray-300 p-2">DEHRADUN</td>
-                    <!-- Paid Leads -->
-                    <td class="border-r border-gray-300 p-2 text-center paid-assigned">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center paid-contacted">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center paid-qualified">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center paid-demo">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center paid-id bg-green-200">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center paid-remaining">50</td>
-                    <!-- Other Leads -->
-                    <td class="border-r border-gray-300 p-2 text-center other-assigned">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center other-contacted">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center other-qualified">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center other-demo">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center other-id bg-green-200">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center other-remaining">50</td>
-                    <!-- Total Leads -->
-                    <td class="border-r border-gray-300 p-2 text-center total-assigned">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center total-contacted">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center total-qualified">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center total-demo">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center total-id bg-green-200">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center total-remaining">50</td>
-                    <!-- Ziwo -->
-                    <td class="border-r border-gray-300 p-2 text-center ziwo-outbound">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center ziwo-answered">50</td>
-                    <td class="p-2 text-center ziwo-paid">50</td>
-                </tr>
-                <tr class="bg-white agent-row" data-agent="ansh" data-branch="kb" data-date="2023-01-24">
-                    <td class="border-r border-gray-300 p-2 font-medium">01</td>
-                    <td class="border-r border-gray-300 p-2">ANSH</td>
-                    <td class="border-r border-gray-300 p-2">KB</td>
-                    <!-- Paid Leads -->
-                    <td class="border-r border-gray-300 p-2 text-center paid-assigned">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center paid-contacted">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center paid-qualified">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center paid-demo">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center paid-id bg-green-200">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center paid-remaining">50</td>
-                    <!-- Other Leads -->
-                    <td class="border-r border-gray-300 p-2 text-center other-assigned">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center other-contacted">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center other-qualified">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center other-demo">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center other-id bg-green-200">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center other-remaining">50</td>
-                    <!-- Total Leads -->
-                    <td class="border-r border-gray-300 p-2 text-center total-assigned">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center total-contacted">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center total-qualified">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center total-demo">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center total-id bg-green-200">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center total-remaining">50</td>
-                    <!-- Ziwo -->
-                    <td class="border-r border-gray-300 p-2 text-center ziwo-outbound">50</td>
-                    <td class="border-r border-gray-300 p-2 text-center ziwo-answered">50</td>
-                    <td class="p-2 text-center ziwo-paid">50</td>
+                    <td class="border-r border-gray-300 p-2 font-medium text-center" colspan="24">Loading...</td>
+
                 </tr>
             </tbody>
         </table>
